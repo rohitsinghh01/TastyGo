@@ -85,6 +85,29 @@ a {
   display: none;
 }
 
+/* MIDDLE CONTAINER */
+
+.middle-container{
+  background-color: black;
+  color: white;
+}
+.middle-container h1{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 4rem;
+
+
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
 /* CARD */
 .card {
   width: 295px;
@@ -92,7 +115,8 @@ a {
   border-radius: 25px;
   border: 1px solid lavender;
   margin: 10px;
-  box-shadow: 5px 5px 15px 5px rgba(230, 230, 250, 1);
+  box-shadow: 1px 1px 2px 1px rgb(59, 59, 60);
+  margin-left: 20px;
 }
 
 .card-img {
@@ -175,6 +199,8 @@ a {
   opacity: 0;
   animation: display 10s infinite;
   transition: filter 0.3s ease-in-out;
+  height: 90vh;
+  width: 100%;
 }
 .carousal > img:hover {
   filter: blur(0) brightness(100%);
