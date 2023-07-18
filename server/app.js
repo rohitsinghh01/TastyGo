@@ -11,9 +11,9 @@ app.get('/', (req, res) => {
 
 
 
-const start = async (url) => {
+const start = async () => {
   try {
-    await connectdb(url);
+    await connectdb(process.env.MONGO_URI);
     app.listen(port, () => {
       console.log(`Server started at ${port}...`);
     });
@@ -21,3 +21,5 @@ const start = async (url) => {
     console.log(error);
   }
 };
+
+start();
