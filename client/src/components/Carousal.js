@@ -12,6 +12,7 @@ export default function Carousal() {
         <img src='images/noodles.jpg' alt='' />
         <div className='text-overlay'>
           <p className='title'>Are you Hungry?</p>
+          <p className='title'>Don't Wait</p>
           <p className='des'>
             Explore a wide range of mouth-watering dishes and indulge in a
             culinary journey that delights your taste buds.<br/>From aromatic

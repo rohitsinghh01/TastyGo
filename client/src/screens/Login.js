@@ -9,8 +9,10 @@ export default function Login() {
 
     <div className='form'>
       <form action="">
-        <input type="text" />
-        <input type="text" />
+        <input type="text" placeholder='Name'/>
+        <input type="text" placeholder='Email'/>
+        <input type="text" placeholder='Password'/>
+        <input type="text" placeholder='location'/>
       </form>
 
     </div>
