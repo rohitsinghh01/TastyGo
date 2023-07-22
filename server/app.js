@@ -2,20 +2,21 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 const port = process.env.PORT || 5000;
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
 
 const connectdb = require('./config/conn');
 const userRouter = require('./routes/createUser');
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With,Content-Type,Accept'
-  );
-  next();
-});
-
 app.use(express.json());
+app.use(cookieParser());
+app.use(
+  cors({
+    credentials: true,
+    origin: process.env.FRONT_END_URL,
+    methods: ['POST', 'GET'],
+  })
+);
 app.use('/api', userRouter);
 
 app.get('/', (req, res) => {
