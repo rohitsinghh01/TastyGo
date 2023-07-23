@@ -24,7 +24,9 @@ export default function Login() {
     if (!json.success) {
       alert('Enter Valid Credentials');
       setFormData({ ...formData, password: '' });
-    } else {
+    } else if(json.success) {
+      localStorage.setItem('authToken',json.authToken)
+      console.log(localStorage.getItem('authToken'))
       navigate('/');
     }
   };

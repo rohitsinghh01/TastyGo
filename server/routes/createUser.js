@@ -69,12 +69,13 @@ router.post(
 
       const authToken = jwt.sign(data, process.env.SECRET_KEY);
 
-      res.cookie('jwt', authToken, {
-        httpOnly: true,
-        sameSite: 'None',
-      });
+      // res.cookie('jwt', authToken, {
+      //   httpOnly: true,
+      //   sameSite: 'None',
+      // });
 
-      return res.status(200).json({ success: true, authToken });
+
+      return res.status(200).json({ success: true,authToken:authToken });
     } catch (error) {
       console.log(error);
       res.status(404).json({ success: false });
